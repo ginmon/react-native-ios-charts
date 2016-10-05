@@ -88,6 +88,9 @@ extension BarLineChartViewBase {
             if json["xAxis"]["drawLabels"].exists() {
                 self.xAxis.drawLabelsEnabled = json["xAxis"]["drawLabels"].boolValue;
             }
+            if json["xAxis"]["avoidFirstLastClippingEnabled"].exists() {
+                self.xAxis.avoidFirstLastClippingEnabled = json["xAxis"]["avoidFirstLastClippingEnabled"].boolValue;
+            }
             if json["xAxis"]["extraOffsets"].exists() {
               if json["xAxis"]["extraOffsets"]["top"].exists() {
                 self.extraTopOffset = CGFloat(json["xAxis"]["extraOffsets"]["top"].floatValue);
