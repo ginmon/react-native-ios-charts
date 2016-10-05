@@ -88,7 +88,20 @@ extension BarLineChartViewBase {
             if json["xAxis"]["drawLabels"].exists() {
                 self.xAxis.drawLabelsEnabled = json["xAxis"]["drawLabels"].boolValue;
             }
-
+            if json["xAxis"]["extraOffsets"].exists() {
+              if json["xAxis"]["extraOffsets"]["top"].exists() {
+                self.extraTopOffset = CGFloat(json["xAxis"]["extraOffsets"]["top"].floatValue);
+              }
+              if json["xAxis"]["extraOffsets"]["bottom"].exists() {
+                self.extraBottomOffset = CGFloat(json["xAxis"]["extraOffsets"]["bottom"].floatValue);
+              }
+              if json["xAxis"]["extraOffsets"]["left"].exists() {
+                self.extraLeftOffset = CGFloat(json["xAxis"]["extraOffsets"]["left"].floatValue);
+              }
+              if json["xAxis"]["extraOffsets"]["right"].exists() {
+                self.extraRightOffset = CGFloat(json["xAxis"]["extraOffsets"]["right"].floatValue);
+              }
+            }
             if json["xAxis"]["textColor"].exists() {
                 self.xAxis.labelTextColor = RCTConvert.uiColor(json["xAxis"]["textColor"].intValue);
             }
