@@ -97,6 +97,9 @@ func getLineData(_ labels: [String], json: JSON!) -> LineChartData {
             if tmp["fillColor"].exists() {
                 dataSet.fillColor = RCTConvert.uiColor(tmp["fillColor"].intValue);
             }
+            if tmp["fillUnderColor"].exists() {
+                dataSet.fillUnderColor = RCTConvert.uiColor(tmp["fillUnderColor"].intValue);
+            }
             
             if tmp["highlightColor"].exists() {
                 dataSet.highlightColor = RCTConvert.uiColor(tmp["highlightColor"].intValue);
