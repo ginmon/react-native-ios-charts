@@ -19,6 +19,9 @@ const processDataSetsColors = (config) => {
       if ('fillColor' in set) {
         set.fillColor = processColor(set.fillColor);
       }
+      if ('fillUnderColor' in set) {
+        set.fillUnderColor = processColor(set.fillUnderColor);
+      }
       if ('highlightColor' in set) {
         set.highlightColor = processColor(set.highlightColor);
       }
