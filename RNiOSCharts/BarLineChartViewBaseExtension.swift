@@ -436,6 +436,11 @@ extension BarLineChartViewBase {
                 }
             }
 
+          
+          if json["leftAxis"]["showOnlyMinMaxEnabled"].exists() {
+            self.leftAxis.showOnlyMinMaxEnabled = json["leftAxis"]["showOnlyMinMaxEnabled"].boolValue;
+          }
+          
             if json["leftAxis"]["drawLimitLinesBehindData"].exists() {
                 self.leftAxis.drawLimitLinesBehindDataEnabled = json["leftAxis"]["drawLimitLinesBehindData"].boolValue;
             }
